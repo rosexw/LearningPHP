@@ -11,7 +11,10 @@
     $myvar = "This is a variable";
     $number = 5;
     $number2 = 3;
-    echo $sum = $number + $number2;
+    $name = "Rose";
+    echo "Hello, " . $name . "!";
+    echo "<p><b>hello</b></p>";
+    echo "<p>hello2</p>";
 
     // /**
     //  * Front to the WordPress application. This file doesn't do anything, but loads
