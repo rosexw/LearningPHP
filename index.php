@@ -11,21 +11,31 @@
     <br>
 
     <?php
-      $people = array("Alice", "Bob", "Chris");
+      $people = array("Bob", "Chris", "Alex");
 
       $numbers = array(5, 3, 7);
       $sum = 0;
 
-      // foreach ($people as $person) {
-      //   echo $person . ' ';
-      // }
 
-      foreach ($numbers as $number) {
-        $sum = $sum + $number;
+      sort($people);
+      // sort($people, SORT_STRING);
+      foreach ($people as $person) {
+        echo $person . ' ';
       }
 
-      echo $sum;
+      // for loop adding numbers
+      // foreach ($numbers as $number) {
+      //   $sum = $sum + $number;
+      // }
+      //
+      // echo $sum;
 
+      sort($numbers, SORT_NUMERIC);
+      echo "<br>";
+      echo "<br>";
+      foreach ($numbers as $number) {
+        echo $number . ', ';
+      }
 
 // Arrays
       // $people = array("Alice", "Bob", "Chris");
