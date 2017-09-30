@@ -30,11 +30,11 @@
       //
       // echo $sum;
 
-      sort($numbers, SORT_NUMERIC);
+      rsort($numbers, SORT_NUMERIC);
       echo "<br>";
       echo "<br>";
       foreach ($numbers as $number) {
-        echo $number . ', ';
+        echo $number . ' ';
       }
 
 // Arrays
