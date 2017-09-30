@@ -2,18 +2,35 @@
 <!DOCTYPE HTML>
 
 <html>
-  <head>
-    <title> Wordpress </title>
-  </head>
-
+  <head><title> Wordpress </title></head>
   <body>
     <form action="process.php" method="post">
       Enter your name: <input name="name" type = "text">
       <input type = "submit">
     </form>
+    <br>
 
     <?php
+      $people = array("Alice", "Bob", "Chris");
 
+      $numbers = array(5, 3, 7);
+      $sum = 0;
+
+      // foreach ($people as $person) {
+      //   echo $person . ' ';
+      // }
+
+      foreach ($numbers as $number) {
+        $sum = $sum + $number;
+      }
+
+      echo $sum;
+
+
+// Arrays
+      // $people = array("Alice", "Bob", "Chris");
+      // print_r ($people);
+      // echo $people[2];
 // define variables, sums, concatenation
     // $myvar = "This is a variable";
     // $number = 5;
