@@ -33,7 +33,7 @@
           <input type="submit" value="Edit"/>
         </form>
         <br>
-        
+
         echo "<a href=\"automobile-edit.php?id=".mysql_result($result,$j,'id')."\"><strong>EDIT</strong>";
         echo "<a href=\"delete.php?id=".mysql_result($result,$j,'id')."\" onclick=\"return confirm('Are you sure you want to delete this car?');\"><strong>delete</strong>";
     }
