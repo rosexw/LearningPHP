@@ -2,81 +2,70 @@
 <!DOCTYPE HTML>
 
 <html>
-  <head><title> Wordpress </title></head>
+  <head><title> Automobiles </title></head>
   <body>
-    <form action="process.php" method="post">
-      Enter your name: <input name="name" type = "text">
-      <input type = "submit">
-    </form>
-    <br>
+    <h1>Show all automobiles</h1>
 
     <?php
-      $people = array("Bob", "Chris", "Alex");
 
-      $numbers = array(5, 3, 7);
-      $sum = 0;
+      $servername = "localhost";
+      $username = "root";
+      $password = "root";
+      $db = "wordpress";
 
-
-      sort($people);
-      // sort($people, SORT_STRING);
-      foreach ($people as $person) {
-        echo $person . ' ';
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $db);
+      // Check connection
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
       }
 
-      // for loop adding numbers
-      // foreach ($numbers as $number) {
-      //   $sum = $sum + $number;
-      // }
-      //
-      // echo $sum;
+      // sql to create table
+      $sql = "CREATE TABLE tbl_automobiles (
+      id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+      car_model VARCHAR(30) NOT NULL,
+      weight DECIMAL NOT NULL,
+      manufacture_year DATE
+      )";
 
-      rsort($numbers, SORT_NUMERIC);
-      echo "<br>";
-      echo "<br>";
-      foreach ($numbers as $number) {
-        echo $number . ' ';
+      //adding values to tbl_automobiles list
+
+      $sql = "INSERT INTO tbl_automobiles (car_model, weight, manufacture_year)
+      VALUES ('Toyota Camry', '3190', '2009')";
+      $sql = "INSERT INTO tbl_automobiles (car_model, weight, manufacture_year)
+      VALUES ('Toyota Corolla', '3049', '2016')";
+
+
+      echo '<table>
+            <tr>
+            <td>Car Model</td>
+            <td>Weight</td>
+            <td>Manufacture Year</td>
+            </tr>
+            <tr>
+            <td>'.$sql["car_model"].'</td>
+            <td>'.$sql["weight"].'</td>
+            <td>'.$sql["manufacture_year"].'</td>
+            </tr>
+            </table>';
+
+      if ($conn->query($sql) === TRUE) {
+          echo "Table tbl_automobiles created successfully";
+      } else {
+          echo "Error creating table: " . $conn->error;
       }
 
-// Arrays
-      // $people = array("Alice", "Bob", "Chris");
-      // print_r ($people);
-      // echo $people[2];
-// define variables, sums, concatenation
-    // $myvar = "This is a variable";
-    // $number = 5;
-    // $number2 = 3;
-    // $name = "Rose";
-    // $sum = $number + $number2;
-    // echo $sum;
-    // echo "Hello, " . $name . "!";
-    // echo "<p><b>hello</b></p>";
-    // echo "<p>hello2</p>";
-// if/else statements
-    // $loggedIn = false;
-    // if ($loggedIn == true) {
-    //   echo "You are logged in";
-    // } else {
-    //   echo "Please log in";
-    // }
-
-// what came with WordPress, but shows an error: "Error establishing a database connection"
-    // /**
-    //  * Front to the WordPress application. This file doesn't do anything, but loads
-    //  * wp-blog-header.php which does and tells WordPress to load the theme.
-    //  *
-    //  * @package WordPress
-    //  */
-    //
-    // /**
-    //  * Tells WordPress to load the WordPress theme and output it.
-    //  *
-    //  * @var bool
-    //  */
-    // define('WP_USE_THEMES', true);
-    //
-    // /** Loads the WordPress Environment and Template */
-    // require( dirname( __FILE__ ) . '/wp-blog-header.php' );
+      $sql="SELECT * from table where sequence = '".$_GET["sequence"]."' ";
+      $rs=mysql_query($sql,$conn) or die(mysql_error());
+      $result=mysql_fetch_array($rs);
+      $conn->close();
     ?>
+
+    <form action="automobile-list.php" method="post">
+      <input name="search" value="<?php echo $row_id; ?>" />
+      <input type="submit" value="submit"/>
+    </form>
+    <br>
 
   </body>
 </html>
