@@ -17,7 +17,6 @@
       ini_set('display_startup_errors', 1);
       error_reporting(E_ALL);
 
-      require 'automobile-list.php';
       require 'config/variables.php';
 
       $servername = "localhost";
@@ -27,6 +26,8 @@
 
       // Create connection
       $conn = new mysqli($servername, $username, $password, $db);
+
+      require 'automobile-list.php';
 
     ?>
 
