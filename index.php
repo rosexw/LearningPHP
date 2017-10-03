@@ -50,6 +50,8 @@
       $select = "SELECT * from tbl_automobiles";
       $hasCars = $conn->query($select)->num_rows > 0;
 
+      //This if statement check if cars are already present - if present, don't add/duplicate records.
+      //check later if there's a way to check the cars, so user doesn't have to refresh everything.
       if (!$hasCars) {
         $insert = "
           INSERT INTO tbl_automobiles (car_model, weight, manufacture_year)

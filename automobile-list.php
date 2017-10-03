@@ -13,7 +13,6 @@
     $select = "SELECT * from tbl_automobiles";
 
     if ($result = $conn->query($select)) {
-      // echo "Got results";
     } else {
       echo "Error selecting: " . $conn->error;
     }
