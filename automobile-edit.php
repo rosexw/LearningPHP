@@ -1,70 +1,50 @@
-<!DOCTYPE HTML>
+<h1>Edit a Car</h1>
+<?php
+	if ($error != '') {
+		echo $error;
+	}
+?>
 
-<html>
-<head><title>Automobiles</title></head>
+<table>
+	<thead style = "font-weight: bold">
+	<td> AUTOMOBILE ID </td>
+	<td> Car Model </td>
+	<td> Weight </td>
+	<td> Manufacture Year </td>
+	</thead>
+	<tr>
+		<form name="edit" method = "POST" action = "validation.php">
+			<td>
+				<?php $row["automobile_id"] ?>
+				<input type="text" name="automobile_id" value="<?php if (isset($row["automobile_id"])) ?>" />
+				<?php $row["automobile_id"]?>
+			</td>
+			<td>
+				<?php $row["car_model"] ?>
+				<input type="text" name="car_model" value="<?php if (isset($row["car_model"])) { echo $row["car_model"]; } ?>" />
+			</td>
+			<td>
+				<?php $row["weight"] ?>
+				<input type="text" name="weight" value="<?php if (isset($row["weight"])) { echo $row["weight"]; } ?>" />
+			</td>
+			<td>
+				<?php $row["manufacture_year"] ?>
+				<input type="text" name="manufacture_year" value="<?php if (isset($row["manufacture_year"])) { echo $row["manufacture_year"]; } ?>" />
+			</td>
+			<td>
+				<?php
+					echo "	<input type = 'submit' value = 'Update'>";
+				?>
+			</td>
 
-<body>
-  <h1>Edit a Car</h1>
-  <?php
-    
-  ?>
 
-  <table>
-  	<thead style = "font-weight: bold">
-  	<td> AUTOMOBILE ID </td>
-  	<td> Car Model </td>
-  	<td> Weight </td>
-  	<td> Manufacture Year </td>
-  	</thead>
-  	<tr>
-  		<form method = "POST" action = "validate-insert.php">
-  			<td>
-  				<?php
-  				echo "<input type = 'hidden' name = 'automobile_id' value =".$_POST['automobile_id'].">".$_POST['automobile_id'];
-  				?>
-  			</td>
-  			<td>
-  				<?php
-  				echo '<input type = "text" name = "car_model" value ="'.$_POST['car_model'].'">';
-  				?>
-  			</td>
-  			<td>
-  				<?php
-  				echo "<input type = 'text' name = 'weight' value =".$_POST['weight'].">";
-  				?>
-  			</td>
-  			<td>
-  				<?php
-  				echo "<input type = 'text' name = 'manufacture_year' value =".$_POST['manufacture_year'].">";
-  				?>
-  			</td>
-  			<td>
-  				<?php
-  				echo "	<input type = 'hidden' name = 'username' value =".$_POST['username'].">
-  						<input type = 'hidden' name = 'password' value =".$_POST['password'].">
-  						<input type = 'hidden' name = 'servername' value =".$_POST['servername'].">";
+		</form>
 
-  				echo "	<input type = 'submit' value = 'Save'>";
-  				?>
-  			</td>
-  		</form>
-  		<form method = "POST" action = "automobile-list.php">
-  			<td>
-  				<?php
-  				echo "	<input type = 'hidden' name = 'username' value =".$_POST['username'].">
-  						<input type = 'hidden' name = 'password' value =".$_POST['password'].">
-  						<input type = 'hidden' name = 'servername' value =".$_POST['servername'].">";
+		<a href="index.php">Go Back to Home Page</a>
 
-  				echo "	<input type = 'submit' value = 'Go Back'>";
-  				?>
-  			</td>
-  		</form>
+	</tr>
 
-  	</tr>
+	<tr>
+	</tr>
 
-  	<tr>
-  	</tr>
-
-  </table>
-</body>
-</html>
+</table>
