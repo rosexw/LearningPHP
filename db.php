@@ -39,11 +39,12 @@
 
   //This if statement check if cars are already present - if present, don't add/duplicate records.
   //check later if there's a way to check the cars, so user doesn't have to refresh everything.
+  //examples here
   if (!$hasCars) {
     $insert = "
       INSERT INTO tbl_automobiles (car_model, weight, manufacture_year)
       VALUES ('Toyota Camry', '3190', '2009-01-01'),
-      ('Honda Civic', '3045', '2016-02-03'),
+      ('Audi A4', '3045', '2016-02-03'),
       ('Toyota Corolla', '3192', '2012-01-01')";
     if ($conn->query($insert) === TRUE) {
         // echo "Inserted successfully";

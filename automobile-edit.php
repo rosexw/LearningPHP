@@ -15,19 +15,19 @@
 	<tr>
 		<form name="edit" method = "POST" action = "validation.php">
 			<td>
-				<p><?php $row["automobile_id"] ?></p>
-				<input type="text" name="automobile_id" value="<?php if (isset($row["automobile_id"])) ?>" />
+				<?php var_dump($_POST["id"]); ?>
+				<input type="text" name="automobile_id" value="<?php if (isset($_POST["automobile_id"])) ?>" />
 			</td>
 			<td>
-				<?php $row["car_model"] ?>
+				<?php var_dump($_POST["car_model"]); ?>
 				<input type="text" name="car_model" value="<?php if (isset($row["car_model"])) { echo $row["car_model"]; } ?>" />
 			</td>
 			<td>
-				<?php $row["weight"] ?>
+				<?php var_dump($_POST["weight"]); ?>
 				<input type="text" name="weight" value="<?php if (isset($row["weight"])) { echo $row["weight"]; } ?>" />
 			</td>
 			<td>
-				<?php $row["manufacture_year"] ?>
+				<?php var_dump($_POST["manufacture_year"]); ?>
 				<input type="text" name="manufacture_year" value="<?php if (isset($row["manufacture_year"])) { echo $row["manufacture_year"]; } ?>" />
 			</td>
 			<td>
