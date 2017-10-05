@@ -7,17 +7,16 @@
 
 <table>
 	<thead style = "font-weight: bold">
-	<td> AUTOMOBILE ID </td>
-	<td> Car Model </td>
-	<td> Weight </td>
-	<td> Manufacture Year </td>
+		<td> Automobile ID </td>
+		<td> Car Model </td>
+		<td> Weight </td>
+		<td> Manufacture Year </td>
 	</thead>
 	<tr>
 		<form name="edit" method = "POST" action = "validation.php">
 			<td>
-				<?php $row["automobile_id"] ?>
+				<p><?php $row["automobile_id"] ?></p>
 				<input type="text" name="automobile_id" value="<?php if (isset($row["automobile_id"])) ?>" />
-				<?php $row["automobile_id"]?>
 			</td>
 			<td>
 				<?php $row["car_model"] ?>
@@ -36,10 +35,7 @@
 					echo "	<input type = 'submit' value = 'Update'>";
 				?>
 			</td>
-
-
 		</form>
-
 		<a href="index.php">Go Back to Home Page</a>
 
 	</tr>
