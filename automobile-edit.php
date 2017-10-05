@@ -15,7 +15,7 @@
 	<tr>
 		<form name="edit" method = "POST" action = "validation.php">
 			<td>
-				<?php $_POST["automobile_id"] ?>
+				<?php echo $_POST["automobile_id"]; ?>
 				<input type="hidden" name="automobile_id" value="<?php if (isset($_POST["automobile_id"])) ?>" />
 			</td>
 			<td>
