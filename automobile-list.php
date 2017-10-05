@@ -23,13 +23,19 @@
               <td>'.$row["manufacture_year"].'</td>
               <td>
                 <form action="automobile-edit.php" method="post">
-                  <input type="hidden" name="id" value="'.$row["automobile_id"].'" />
+                  <input type="hidden" name="automobile_id" value="'.$row["automobile_id"].'" />
+                  <input type="hidden" name="car_model" value="'.$row["car_model"].'" />
+                  <input type="hidden" name="weight" value="'.$row["weight"].'" />
+                  <input type="hidden" name="manufacture_year" value="'.$row["manufacture_year"].'" />
                   <input type="submit" value="Edit"/>
                 </form>
               </td>
               <td>
                 <form action="automobile-delete.php" method="post">
-                  <input type="hidden" name="id" value="'.$row["automobile_id"].'" />
+                  <input type="hidden" name="automobile_id" value="'.$row["automobile_id"].'" />
+                  <input type="hidden" name="car_model" value="'.$row["car_model"].'" />
+                  <input type="hidden" name="weight" value="'.$row["weight"].'" />
+                  <input type="hidden" name="manufacture_year" value="'.$row["manufacture_year"].'" />
                   <input type="submit" value="Delete"/>
                 </form>
               </td>

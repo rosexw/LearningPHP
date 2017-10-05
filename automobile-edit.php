@@ -15,20 +15,17 @@
 	<tr>
 		<form name="edit" method = "POST" action = "validation.php">
 			<td>
-				<?php var_dump($_POST["id"]); ?>
-				<input type="text" name="automobile_id" value="<?php if (isset($_POST["automobile_id"])) ?>" />
+				<?php $_POST["automobile_id"] ?>
+				<input type="hidden" name="automobile_id" value="<?php if (isset($_POST["automobile_id"])) ?>" />
 			</td>
 			<td>
-				<?php var_dump($_POST["car_model"]); ?>
-				<input type="text" name="car_model" value="<?php if (isset($row["car_model"])) { echo $row["car_model"]; } ?>" />
+				<input type="text" name="car_model" value="<?php if (isset($_POST["car_model"])) { echo $_POST["car_model"]; } ?>" />
 			</td>
 			<td>
-				<?php var_dump($_POST["weight"]); ?>
-				<input type="text" name="weight" value="<?php if (isset($row["weight"])) { echo $row["weight"]; } ?>" />
+				<input type="text" name="weight" value="<?php if (isset($_POST["weight"])) { echo $_POST["weight"]; } ?>" />
 			</td>
 			<td>
-				<?php var_dump($_POST["manufacture_year"]); ?>
-				<input type="text" name="manufacture_year" value="<?php if (isset($row["manufacture_year"])) { echo $row["manufacture_year"]; } ?>" />
+				<input type="text" name="manufacture_year" value="<?php if (isset($_POST["manufacture_year"])) { echo $_POST["manufacture_year"]; } ?>" />
 			</td>
 			<td>
 				<?php
