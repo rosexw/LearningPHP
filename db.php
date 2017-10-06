@@ -8,8 +8,8 @@
 
   $servername = "localhost";
   $username = "root";
-  $password = "root";
-  $db = "wordpress";
+  $password = "Bitnami";
+  $db = "automobiles";
 
   // Create connection
   $conn = new mysqli($servername, $username, $password, $db);
