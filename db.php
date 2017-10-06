@@ -28,6 +28,7 @@
   )";
 
   if ($conn->query($sql) === TRUE) {
+      //testing below
       // echo "Table tbl_automobiles created successfully";
   } else {
       echo "Error creating table: " . $conn->error;
@@ -53,6 +54,5 @@
     }
   }
 
-  require 'automobile-list.php';
 
 ?>

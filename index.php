@@ -14,6 +14,7 @@
 
     <?php
       require 'db.php';
+      require 'automobile-list.php';
     ?>
 
   </body>
