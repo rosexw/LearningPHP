@@ -49,4 +49,4 @@ The information for <?php echo $automobile_id; ?> has been changed to:
   </tr>
 </table>
 
-<a href="index.php">Go Back to Home Page to See All Automobiles</a>
+<a href="index.php">Back to Home</a>

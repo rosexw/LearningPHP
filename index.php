@@ -15,6 +15,10 @@
     <?php
       require 'db.php';
       require 'automobile-list.php';
+
+
+      // add a reset button
+      // add a "Add new entry form"
     ?>
 
   </body>

@@ -8,24 +8,22 @@ Deletes a specific entry from the 'tbl_automobiles' table
 */
 
 // connect to the database
-include('automobile-list.php');
+require 'db.php';
 
 // check if the 'id' variable is set in URL, and check that it is valid
 
-if (isset($_GET['automobile_id']) && is_numeric($_GET['automobile_id'])) {
+if ($_POST['automobile_id'] && is_numeric($_POST['automobile_id'])) {
   // get id value
-  $id = $_GET['automobile_id'];
+  $id = $_POST['automobile_id'];
 
-  // delete the entry
+  // delete the entry for the database
 
-  $result = mysql_query("DELETE FROM tbl_automobiles WHERE automobile_id=$id")
-  or die(mysql_error());
-
-  // redirect back to the view page
-  header("Location: index.php");
+  $result = $conn->query("DELETE FROM tbl_automobiles WHERE automobile_id=" . $_POST['automobile_id'] . ";");
+  echo "Deleted successfully";
 } else {
-// if id isn't set, or isn't valid, redirect back to view page
-  header("Location: index.php");
+  echo "error";
 }
 
 ?>
+
+<a href="index.php">Back to Home</a>
