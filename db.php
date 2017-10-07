@@ -19,7 +19,7 @@
     automobile_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     car_model VARCHAR(30) NOT NULL,
     weight DECIMAL NOT NULL,
-    manufacture_year DATE
+    manufacture_year YEAR(4)
   )";
 
   if ($conn->query($sql) === TRUE) {
@@ -39,9 +39,9 @@
   if (!$hasCars) {
     $insert = "
       INSERT INTO tbl_automobiles (car_model, weight, manufacture_year)
-      VALUES ('Toyota Camry', '3190', '2009-01-01'),
-      ('Audi A4', '3045', '2016-02-03'),
-      ('Toyota Corolla', '3192', '2012-01-01')";
+      VALUES ('Camry', '3190', '2009-02-01'),
+      ('A4', '3045', '2017'),
+      ('Civic', '3192', '2012')";
     if ($conn->query($insert) === TRUE) {
         // echo "Inserted successfully";
     } else {
