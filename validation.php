@@ -56,6 +56,8 @@
         echo "<p>We've never heard of that car before</p>";
   }
 
+//Check if email is in valid email format. Do we have to use preg_match or reg ex?
+// https://stackoverflow.com/questions/13719821/email-validation-using-regular-expression-in-php
   if(!filter_var($sales_email, FILTER_VALIDATE_EMAIL)) {
      $error = true;
      echo "<p>Please enter a valid e-mail address.</p>";
