@@ -13,7 +13,7 @@
 		<td> Manufacture Year </td>
 	</thead>
 	<tr>
-		<form name="edit" method = "POST" action = "validation.php">
+		<form name="edit" method = "POST" action = "automobile-edit-complete.php">
 			<td>
 				<?php echo $_POST["automobile_id"]; ?>
 				<input type="hidden" name="automobile_id" value="<?php echo $_POST["automobile_id"]; ?>" />
