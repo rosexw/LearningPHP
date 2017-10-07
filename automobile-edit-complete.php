@@ -33,11 +33,11 @@
           </tr>
         </table>
 
-        <a href='index.php'>Back to Home</a>";
+        <p><a href='index.php'>Back to Home</a></p>";
       } else {
       echo "
-        Fields are either invalid or empty
-        <p><a href='automobile-edit.php'>Go Back</a></p>";
+      <p><a href='automobile-edit.php'>Go Back</a></p>
+      <p><a href='index.php'>Go Home</a></p>";
     };
 
  ?>

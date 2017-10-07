@@ -28,10 +28,9 @@ if (!$error) {
           <td>" . $manufacture_year . "</td>
         </tr>
       </table>
-      <a href='index.php'>Go Back to Home Page</a>";
+      <p><a href='index.php'>Go Back to Home Page</a></p>";
   } else {
     echo "
-      Fields are either invalid or empty.
       <p><a href='index.php'>Go Back</a><p>";
 };
 

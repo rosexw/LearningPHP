@@ -16,6 +16,7 @@
   foreach($required as $field) {
     if (empty($_POST[$field])) {
       $error = true;
+      echo "All fields are required. You must've forgotten a field!";
     }
   }
 
@@ -23,6 +24,17 @@
 
   if (!is_string($car_model) || !is_numeric($weight) || !is_numeric($manufacture_year)) {
     $error = true;
+    echo "<p>The fields must be in the correct formats: Car Model is a string. Weights and Manufacture Year must be numbers.</p>";
+  }
+
+  if ((int)$manufacture_year <= 1950 ) {
+    $error = true;
+    echo "<p>The manufacture year of the car must be after 1950.</p>";
+  }
+
+  if ((int)$weight <= 5 || (int)$weight >= 10 ) {
+    $error = true;
+    echo "<p>The weight of the car must be between 5 and 10.</p>";
   }
 
 ?>
