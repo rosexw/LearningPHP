@@ -4,15 +4,10 @@
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
 
-  require 'config/variables.php';
-
-  $servername = "localhost";
-  $username = "root";
-  $password = "Bitnami";
-  $db = "automobiles";
+  require 'config.php';
 
   // Create connection
-  $conn = new mysqli($servername, $username, $password, $db);
+  $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
   // Check connection
   if ($conn->connect_error) {

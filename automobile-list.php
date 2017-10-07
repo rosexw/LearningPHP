@@ -45,7 +45,7 @@
     echo '<br/>
           <tr>
             <form action="automobile-new.php" method="post">
-              <td><input type="hidden" name="automobile_id" />' . $_POST["automobile_id"] .'</td>
+              <td><input type="hidden" name="automobile_id" /></td>
               <td><input type="text" name="car_model" /></td>
               <td><input type="text" name="weight" /></td>
               <td><input type="text" name="manufacture_year" /></td>

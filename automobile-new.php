@@ -1,22 +1,38 @@
 <?php
+require 'db.php';
 
-if ($result = $conn->query($select)) {
-} else {
-  echo "Error selecting: " . $conn->error;
-}
+$car_model    = htmlspecialchars($_POST['car_model']);
+$weight   = htmlspecialchars($_POST['weight']);
+$manufacture_year = htmlspecialchars($_POST['manufacture_year']);
 
-
-mysql_select_db("automobiles", $conn);
+// Required field names
+$required = array('car_model', 'weight', 'manufacture_year');
 
 $sql="INSERT INTO tbl_automobiles (car_model, weight, manufacture_year)
 VALUES
-('$_POST[car_model]','$_POST[weight]','$_POST[manufacture_year]')";
+('$car_model','$weight','$manufacture_year')";
 
-if (!mysql_query($sql,$con))
-  {
-  die('Error: ' . mysql_error());
-  }
-echo "1 record added";
+// run SQL command to update table of automobiles
+if ($conn->query($sql) === TRUE) {
+    echo "One record has been added";
+} else {
+    echo "Error updating table: " . $conn->error;
+}
 
-mysql_close($con)
+$conn->close();
+
 ?>
+
+<table>
+  <thead style = "font-weight: bold">
+    <td> Car Model </td>
+    <td> Weight </td>
+    <td> Manufacture Year </td>
+  </thead>
+  <tr>
+    <td><?php echo $car_model; ?></td>
+    <td><?php echo $weight; ?></td>
+    <td><?php echo $manufacture_year; ?></td>
+  </tr>
+</table>
+<a href="index.php">Go Back to Home Page</a>
