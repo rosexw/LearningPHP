@@ -36,7 +36,7 @@
         <a href='index.php'>Back to Home</a>";
       } else {
       echo "
-        Please enter all fields
+        Fields are either invalid or empty
         <p><a href='automobile-edit.php'>Go Back</a></p>";
     };
 

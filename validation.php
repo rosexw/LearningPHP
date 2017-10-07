@@ -19,4 +19,10 @@
     }
   }
 
+  //check if all fields are the required types
+
+  if (!is_string($car_model) || !is_numeric($weight) || !is_numeric($manufacture_year)) {
+    $error = true;
+  }
+
 ?>

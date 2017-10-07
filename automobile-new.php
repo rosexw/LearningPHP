@@ -31,7 +31,7 @@ if (!$error) {
       <a href='index.php'>Go Back to Home Page</a>";
   } else {
     echo "
-      Please enter all fields
+      Fields are either invalid or empty.
       <p><a href='index.php'>Go Back</a><p>";
 };
 
