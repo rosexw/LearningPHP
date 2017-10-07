@@ -7,7 +7,8 @@
       $sql = "UPDATE tbl_automobiles
               SET car_model = '" . $car_model . "',
                   weight = " . $weight . ",
-                  manufacture_year = '" . $manufacture_year . "'
+                  manufacture_year = '" . $manufacture_year . ",
+                  sales_email = '" . $sales_email . "'
               WHERE automobile_id = " . $automobile_id . ";";
 
         // run SQL command to update table of automobiles
@@ -24,12 +25,14 @@
             <td> Car Model </td>
             <td> Weight </td>
             <td> Manufacture Year </td>
+            <td> Sales Email </td>
           </thead>
           <tr>
             <td>" . $automobile_id . "</td>
             <td>" . $car_model . "</td>
             <td>" . $weight . "</td>
             <td>" . $manufacture_year . "</td>
+            <td>" . $sales_email . "</td>
           </tr>
         </table>
 

@@ -20,7 +20,8 @@
     automobile_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     car_model VARCHAR(30) NOT NULL,
     weight DECIMAL NOT NULL,
-    manufacture_year YEAR(4)
+    manufacture_year YEAR(4),
+    sales_email VARCHAR(30) NOT NULL
   )";
 
   if ($conn->query($sql) === TRUE) {
@@ -39,10 +40,10 @@
   //examples here
   if (!$hasCars) {
     $insert = "
-      INSERT INTO tbl_automobiles (car_model, weight, manufacture_year)
-      VALUES ('audi', '6', '2009'),
-      ('mercedes', '8', '2017'),
-      ('toyota', '9', '2012')";
+      INSERT INTO tbl_automobiles (car_model, weight, manufacture_year, sales_email)
+      VALUES ('audi', '6', '2009', 'audi@car.com'),
+      ('mercedes', '8', '2017', 'mercedes@car.com'),
+      ('toyota', '9', '2012', 'toyota@car.com')";
     if ($conn->query($insert) === TRUE) {
         // echo "Inserted successfully";
     } else {

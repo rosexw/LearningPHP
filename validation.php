@@ -10,7 +10,7 @@
 
 
   // Required field names
-  $required = array('car_model', 'weight', 'manufacture_year');
+  $required = array('car_model', 'weight', 'manufacture_year', 'sales_email');
 
   // Loop over field names, make sure each one exists and is not empty
   $error = false;
@@ -24,9 +24,12 @@
 
   //check if all fields are the required types:
   // $car_model is a string, $weight and $year are numbers
-  if (!is_string($car_model) || !is_numeric($weight) || !is_numeric($manufacture_year)) {
-    $error = true;
-    echo "<p>The fields must be in the correct formats: Car Model is a string. Weights and Manufacture Year must be numbers.</p>";
+  if (!is_string($car_model)
+      || !is_numeric($weight)
+      || !is_numeric($manufacture_year)
+      || !is_string($sales_email)) {
+        $error = true;
+        echo "<p>The fields must be in the correct formats: Car Model is a string. Weights and Manufacture Year must be numbers.</p>";
   }
 
   // $manufacture_year > 1950
@@ -50,7 +53,12 @@
       && $modelLower !== 'toyota'
       && $modelLower !== 'chevrolet') {
         $error = true;
-        echo "We've never heard of that car before";
-    }
+        echo "<p>We've never heard of that car before</p>";
+  }
+
+  if(!filter_var($sales_email, FILTER_VALIDATE_EMAIL)) {
+     $error = true;
+     echo "<p>Please enter a valid e-mail address.</p>";
+   }
 
 ?>

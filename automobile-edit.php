@@ -11,6 +11,7 @@
 		<td> Car Model </td>
 		<td> Weight </td>
 		<td> Manufacture Year </td>
+		<td> Sales Email </td>
 	</thead>
 	<tr>
 		<form name="edit" method = "POST" action = "automobile-edit-complete.php">
@@ -26,6 +27,9 @@
 			</td>
 			<td>
 				<input type="text" name="manufacture_year" value="<?php if (isset($_POST["manufacture_year"])) { echo $_POST["manufacture_year"]; } ?>" />
+			</td>
+			<td>
+				<input type="text" name="sales_email" value="<?php if (isset($_POST["sales_email"])) { echo $_POST["sales_email"]; } ?>" />
 			</td>
 			<td>
 				<?php

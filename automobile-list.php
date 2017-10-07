@@ -4,6 +4,7 @@
       <th>Car Model</th>
       <th>Weight</th>
       <th>Manufacture Year</th>
+      <th>Sales Email</th>
     </tr>
 
     <?php
@@ -21,12 +22,14 @@
               <td>'.$row["car_model"].'</td>
               <td>'.$row["weight"].'</td>
               <td>'.$row["manufacture_year"].'</td>
+              <td>'.$row["sales_email"].'</td>
               <td>
                 <form action="automobile-edit.php" method="post">
                   <input type="hidden" name="automobile_id" value="'.$row["automobile_id"].'" />
                   <input type="hidden" name="car_model" value="'.$row["car_model"].'" />
                   <input type="hidden" name="weight" value="'.$row["weight"].'" />
                   <input type="hidden" name="manufacture_year" value="'.$row["manufacture_year"].'" />
+                  <input type="hidden" name="sales_email" value="'.$row["sales_email"].'" />
                   <input type="submit" value="Edit"/>
                 </form>
               </td>
@@ -36,6 +39,7 @@
                   <input type="hidden" name="car_model" value="'.$row["car_model"].'" />
                   <input type="hidden" name="weight" value="'.$row["weight"].'" />
                   <input type="hidden" name="manufacture_year" value="'.$row["manufacture_year"].'" />
+                  <input type="hidden" name="sales_email" value="'.$row["sales_email"].'" />
                   <input type="submit" value="Delete"/>
                 </form>
               </td>
@@ -49,6 +53,7 @@
               <td><input type="text" name="car_model" /></td>
               <td><input type="text" name="weight" /></td>
               <td><input type="text" name="manufacture_year" /></td>
+              <td><input type="text" name="sales_email" /></td>
               <td></td>
               <td><input type="submit" value="Add New Car"/></td>
             </form>

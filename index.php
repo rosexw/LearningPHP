@@ -17,3 +17,9 @@
 </html>
 
 <!-- includes -->
+
+
+<!-- How to clear the database and reset to the Examples 
+/Applications/MAMP/Library/bin/mysql -uroot -proot
+use wordpress
+drop tables tbl_automobiles; -->
