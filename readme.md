@@ -13,3 +13,18 @@ Start servers
 Open WebStart page
 Go to main page: http://localhost:8888/
 Click on the folder or go to: http://localhost:8888/automobile/ to see results
+
+In MySQLi format, it's able to:
+- show a list at automobile-list.php of all the cars,
+- Have a link to edit a specific car when clicked on, takes you to automobile-edit.php
+- Do form field validation on server side, make sure all fields are required and of appropriate types
+- Form validation:
+  - year > 1950
+  - 5 < weight < 10
+  - model (one of following): mercedes, audi, ford, honda, toyota, chevrolet (not case sensitive)
+- add new column: sales_email, required, valid e-mail format
+
+If I can at a later time:
+- refactor code to MVC best practices
+- add a search function
+- add a reset database list to the prerecorded ones (without having to do so on Command Line)
