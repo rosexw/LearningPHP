@@ -4,8 +4,6 @@ Used this tutorial to learn PHP in 15 minutes:
 https://www.youtube.com/watch?v=ZdP0KM49IVk
 My tests for this tutorial is in the learning folder.
 
-Original Wordpress folder consists of files from the Wordpress installation, but is not needed for this activity.
-
 This is an exercise to learn to code PHP with MySQL. It allows users to view a database of cars, edit/delete certain cars with restrictions, and add new entries.
 
 How to run it:
