@@ -40,9 +40,9 @@
   if (!$hasCars) {
     $insert = "
       INSERT INTO tbl_automobiles (car_model, weight, manufacture_year)
-      VALUES ('Camry', '3190', '2009-02-01'),
-      ('A4', '3045', '2017'),
-      ('Civic', '3192', '2012')";
+      VALUES ('audi', '6', '2009'),
+      ('mercedes', '8', '2017'),
+      ('toyota', '9', '2012')";
     if ($conn->query($insert) === TRUE) {
         // echo "Inserted successfully";
     } else {
