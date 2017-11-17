@@ -28,3 +28,4 @@ If I can at a later time:
 - refactor code to MVC best practices
 - add a search function
 - add a reset database list to the prerecorded ones (without having to do so on Command Line)
+- work on design with CSS
