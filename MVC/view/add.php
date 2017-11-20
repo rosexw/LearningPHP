@@ -1,20 +1,6 @@
 <?php
-require 'db.php';
-require 'validation.php';
-
-
-if (!$error) {
-    $sql="INSERT INTO tbl_automobiles (car_model, weight, manufacture_year, sales_email)
-    VALUES
-    ('$car_model','$weight','$manufacture_year','$sales_email')";
-
-    // run SQL command to update table of automobiles
-    if ($conn->query($sql) === TRUE) {
-        echo "One record has been added";
-      } else {
-        echo "Error updating table: " . $conn->error;
-    }
-
+    if (!$error) {
+      $controller->addCar($car_model, $weight, $manufacture_year, $sales_email);
 ?>
 
       <table>
@@ -38,8 +24,5 @@ if (!$error) {
       <p><a href='index.php'>Go Back</a><p>
   <?php
 }
-
-
-$conn->close();
 
 ?>

@@ -29,19 +29,19 @@
       || !is_numeric($manufacture_year)
       || !is_string($sales_email)) {
         $error = true;
-        echo "<p>The fields must be in the correct formats: Car Model is a string. Weights and Manufacture Year must be numbers.</p>";
+        echo "The fields must be in the correct formats: Car Model is a string. Weights and Manufacture Year must be numbers.";
   }
 
   // $manufacture_year > 1950
   if ((int)$manufacture_year <= 1950 ) {
     $error = true;
-    echo "<p>The manufacture year of the car must be after 1950.</p>";
+    echo "The manufacture year of the car must be after 1950.";
   }
 
   // 5 < $weight < 10
   if ((int)$weight <= 5 || (int)$weight >= 10 ) {
     $error = true;
-    echo "<p>The weight of the car must be between 5 and 10.</p>";
+    echo "The weight of the car must be between 5 and 10.";
   }
 
   // model of car (isn't this a make?) = mercedes, audi, ford, honda, toya, chevrolet (not case sensitive)
@@ -53,14 +53,14 @@
       && $modelLower !== 'toyota'
       && $modelLower !== 'chevrolet') {
         $error = true;
-        echo "<p>We've never heard of that car before</p>";
+        echo "We've never heard of that car before";
   }
 
 //Check if email is in valid email format. Do we have to use preg_match or reg ex?
 // https://stackoverflow.com/questions/13719821/email-validation-using-regular-expression-in-php
   if(!filter_var($sales_email, FILTER_VALIDATE_EMAIL)) {
      $error = true;
-     echo "<p>Please enter a valid e-mail address.</p>";
+     echo "Please enter a valid e-mail address.";
    }
 
 ?>

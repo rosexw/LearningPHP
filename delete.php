@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
   <html lang="en">
 
@@ -7,7 +8,8 @@
 
     <?php
       require 'initialize.php';
-      require 'MVC/view/list.php';
+      require 'MVC/view/delete.php';
+
     ?>
 
     </body>

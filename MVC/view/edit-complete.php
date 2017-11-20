@@ -1,7 +1,8 @@
 <?php
-    $controller->editCar($car_model, $weight, $manufacture_year, $sales_email, $automobile_id);
 
     if (!$error) {
+      $controller->editCar($car_model, $weight, $manufacture_year, $sales_email, $automobile_id);
+
       ?>
           <table>
           <thead style = 'font-weight: bold'>

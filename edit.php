@@ -7,7 +7,8 @@
 
     <?php
       require 'initialize.php';
-      require 'MVC/view/list.php';
+      require 'MVC/view/edit.php';
+
     ?>
 
     </body>

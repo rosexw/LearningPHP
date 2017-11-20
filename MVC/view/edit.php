@@ -1,9 +1,4 @@
 <h1>Edit a Car</h1>
-<?php
-	if ($error != '') {
-		echo $error;
-	}
-?>
 
 <table>
 	<thead style = "font-weight: bold">
@@ -14,7 +9,7 @@
 		<td> Sales Email </td>
 	</thead>
 	<tr>
-		<form name="edit" method = "POST" action = "../../edit-complete.php">
+		<form name="edit" method = "POST" action = "edit-complete.php">
 			<td>
 				<?php echo $_POST["automobile_id"]; ?>
 				<input type="hidden" name="automobile_id" value="<?php echo $_POST["automobile_id"]; ?>" />

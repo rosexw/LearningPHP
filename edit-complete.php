@@ -1,15 +1,16 @@
+<!DOCTYPE HTML>
+  <html lang="en">
 
-<?php
-  require 'db.php';
-  require 'validation.php';
+    <head><title> Automobiles </title></head>
+    <body>
 
-  require 'MVC/controller/controller.php';
-  require 'MVC/models/model.php';
 
-  $model = new Model($conn);
-  $controller = new Controller($model);
+    <?php
+      require 'initialize.php';
+      require 'validation.php';
+      require 'MVC/view/edit-complete.php';
 
-  require 'MVC/view/edit-complete.php';
+    ?>
 
-  // echo $view->output();
-?>
+    </body>
+  </html>

@@ -1,9 +1,4 @@
-<!DOCTYPE HTML>
-<html lang="en">
 
-<html>
-  <head><title> Automobiles </title></head>
-  <body>
     <h1>All automobiles</h1>
 
     <!-- includes -->
@@ -33,7 +28,7 @@
             <td> <?php echo $row["manufacture_year"] ?></td>
             <td> <?php echo $row["sales_email"] ?></td>
             <td>
-              <form action="MVC/view/edit.php" method="post">
+              <form action="edit.php" method="post">
                 <input type="hidden" name="automobile_id" value="<?php echo $row["automobile_id"] ?>" />
                 <input type="hidden" name="car_model" value="<?php echo $row["car_model"]?>" />
                 <input type="hidden" name="weight" value="<?php echo $row["weight"] ?>" />
@@ -43,7 +38,7 @@
               </form>
             </td>
             <td>
-              <form action="automobile-delete.php" method="post">
+              <form action="delete.php" method="post">
                 <input type="hidden" name="automobile_id" value="<?php echo $row["automobile_id"] ?>" />
                 <input type="hidden" name="car_model" value="<?php echo $row["car_model"] ?>" />
                 <input type="hidden" name="weight" value="<?php echo $row["weight"] ?>" />
@@ -60,7 +55,7 @@
 
         <br/>
         <tr>
-          <form action="automobile-new.php" method="post">
+          <form action="add.php" method="post">
             <td><input type="hidden" name="automobile_id" /></td>
             <td><input type="text" name="car_model" /></td>
             <td><input type="text" name="weight" /></td>
@@ -71,7 +66,3 @@
           </form>
         </tr>
     </table>
-
-
-  </body>
-</html>
