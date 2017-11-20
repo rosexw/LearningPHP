@@ -61,8 +61,8 @@
             <td><input type="text" name="weight" /></td>
             <td><input type="text" name="manufacture_year" /></td>
             <td><input type="text" name="sales_email" /></td>
-            <td></td>
-            <td><input type="submit" value="Add New Car"/></td>
+            <td><input type="submit" value="Add"/></td>
+            <td><input type="reset" value=" Reset "/></td>
           </form>
         </tr>
     </table>
