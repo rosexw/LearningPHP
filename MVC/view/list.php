@@ -26,10 +26,9 @@
           while ($row = $list->fetch_array()) {
         ?>
           <tr>
-
             <td>
-              <form action="#" method="post">
-                <input type="checkbox" name="automobile_id" value="<?php echo $row["automobile_id"] ?>" />
+              <form action="delete.php" method="post">
+                <input type="checkbox" name="checkbox" value="<?php echo $row["automobile_id"] ?>" />
               </form>
             </td>
             <td> <?php echo $row["automobile_id"] ?></td>
@@ -73,7 +72,7 @@
             <td><input type="text" name="manufacture_year" /></td>
             <td><input type="text" name="sales_email" /></td>
             <td><input type="submit" value="Add"/></td>
-            <td><input type="reset" value=" Reset "/></td>
+            <td><input type="reset" value=" Clear "/></td>
           </form>
         </tr>
     </table>
