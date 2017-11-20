@@ -32,9 +32,7 @@
 				<input type="text" name="sales_email" value="<?php if (isset($_POST["sales_email"])) { echo $_POST["sales_email"]; } ?>" />
 			</td>
 			<td>
-				<?php
-					echo "	<input type = 'submit' value = 'Update'>";
-				?>
+				<input type = 'submit' value = 'Update'>
 			</td>
 		</form>
 		<a href="index.php">Go Back to Home Page</a>

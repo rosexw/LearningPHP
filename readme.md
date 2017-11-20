@@ -29,3 +29,6 @@ If I can at a later time:
 - add a search function
 - add a reset database list to the prerecorded ones (without having to do so on Command Line)
 - work on design with CSS
+
+The first version does not use MVC best practices and can be found in the non-MVC folder.
+The index.php now uses MVC best practices by drawing the Model, Controller, and Views from inside the MVC folder.

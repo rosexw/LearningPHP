@@ -14,7 +14,7 @@
 		<td> Sales Email </td>
 	</thead>
 	<tr>
-		<form name="edit" method = "POST" action = "automobile-edit-complete.php">
+		<form name="edit" method = "POST" action = "../../edit-complete.php">
 			<td>
 				<?php echo $_POST["automobile_id"]; ?>
 				<input type="hidden" name="automobile_id" value="<?php echo $_POST["automobile_id"]; ?>" />
@@ -32,9 +32,7 @@
 				<input type="text" name="sales_email" value="<?php if (isset($_POST["sales_email"])) { echo $_POST["sales_email"]; } ?>" />
 			</td>
 			<td>
-				<?php
-					echo "	<input type = 'submit' value = 'Update'>";
-				?>
+				<input type = 'submit' value = 'Update'>
 			</td>
 		</form>
 		<a href="index.php">Go Back to Home Page</a>
