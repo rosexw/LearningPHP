@@ -1,4 +1,6 @@
 
+<link rel="stylesheet" type="text/css" href="Style/style.css">
+
     <h1>All automobiles</h1>
 
     <!-- includes -->

@@ -30,7 +30,7 @@
 				<input type = 'submit' value = 'Update'>
 			</td>
 		</form>
-		<a href="index.php">Go Back to Home Page</a>
+		<a href="index.php" class="home">Go Back to Home Page</a>
 
 	</tr>
 
