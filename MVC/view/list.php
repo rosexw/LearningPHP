@@ -12,6 +12,8 @@
     drop tables tbl_automobiles; -->
     <table>
         <tr>
+          <th></th>
+          <!-- <th><form action="delete.php"><input type="submit" value="Delete"></input></delete></th> -->
           <th>Automobile ID</th>
           <th>Car Model</th>
           <th>Weight</th>
@@ -24,6 +26,12 @@
           while ($row = $list->fetch_array()) {
         ?>
           <tr>
+
+            <td>
+              <form action="#" method="post">
+                <input type="checkbox" name="automobile_id" value="<?php echo $row["automobile_id"] ?>" />
+              </form>
+            </td>
             <td> <?php echo $row["automobile_id"] ?></td>
             <td> <?php echo $row["car_model"] ?></td>
             <td> <?php echo $row["weight"] ?></td>
@@ -58,6 +66,7 @@
         <br/>
         <tr>
           <form action="add.php" method="post">
+            <td></td>
             <td><input type="hidden" name="automobile_id" /></td>
             <td><input type="text" name="car_model" /></td>
             <td><input type="text" name="weight" /></td>
