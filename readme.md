@@ -25,10 +25,10 @@ In MySQLi format, it's able to:
 - add new column: sales_email, required, valid e-mail format
 
 If I can at a later time:
-- refactor code to MVC best practices
+- ~~refactor code to MVC best practices~~
 - add a search function
 - add a reset database list to the prerecorded ones (without having to do so on Command Line)
-- work on design with CSS
+- ~~work on design with CSS~~
 
 The first version does not use MVC best practices and can be found in the non-MVC folder.
 The index.php now uses MVC best practices by drawing the Model, Controller, and Views from inside the MVC folder.

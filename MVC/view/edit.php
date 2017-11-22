@@ -1,12 +1,14 @@
+<link rel="stylesheet" type="text/css" href="style.css">
+
 <h1>Edit a Car</h1>
 
 <table>
-	<thead style = "font-weight: bold">
-		<td> Automobile ID </td>
-		<td> Car Model </td>
-		<td> Weight </td>
-		<td> Manufacture Year </td>
-		<td> Sales Email </td>
+	<thead>
+		<th> Automobile ID </th>
+		<th> Car Model </th>
+		<th> Weight </th>
+		<th> Manufacture Year </th>
+		<th> Sales Email </th>
 	</thead>
 	<tr>
 		<form name="edit" method = "POST" action = "edit-complete.php">
@@ -30,10 +32,10 @@
 				<input type = 'submit' value = 'Update'>
 			</td>
 		</form>
-
-		<a href="index.php" class="home">Go Back to Home Page</a>
-		<p />
-
 	</tr>
+
+	<p />
+	<a href="index.php"> &#9668; Go Back to Home Page</a>
+	<p />
 
 </table>

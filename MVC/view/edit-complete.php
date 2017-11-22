@@ -1,3 +1,8 @@
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<div class="center">
+
 <?php
 
     if (!$error) {
@@ -5,12 +10,12 @@
 
       ?>
           <table>
-          <thead style = 'font-weight: bold'>
-            <td> Automobile ID </td>
-            <td> Car Model </td>
-            <td> Weight </td>
-            <td> Manufacture Year </td>
-            <td> Sales Email </td>
+          <thead>
+            <th> Automobile ID </th>
+            <th> Car Model </th>
+            <th> Weight </th>
+            <th> Manufacture Year </th>
+            <th> Sales Email </th>
           </thead>
           <tr>
             <td> <?php echo $automobile_id ?> </td>
@@ -21,13 +26,15 @@
           </tr>
         </table>
 
-        <p><a href='index.php'>Back to Home</a></p>
+        <p><a href='index.php'>&#9668; Back to Home</a></p>
       <?php
       } else {
       ?>
-      <p><a href='MVC/view/edit.php'>Go Back</a></p>
-      <p><a href='index.php'>Go Home</a></p>
+      <p><a href='MVC/view/edit.php'>&#9668; Go Back</a></p>
+      <p><a href='index.php'>&#9668; Go Home</a></p>
       <?php
     }
 
  ?>
+
+</div>
