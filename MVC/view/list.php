@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" type="text/css" href="Style/style.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 
     <h1>All automobiles</h1>
 
@@ -10,27 +10,23 @@
     /Applications/MAMP/Library/bin/mysql -uroot -proot
     use wordpress
     drop tables tbl_automobiles; -->
+
     <table>
-        <tr>
+        <thead>
           <th></th>
-          <!-- <th><form action="delete.php"><input type="submit" value="Delete"></input></delete></th> -->
           <th>Automobile ID</th>
           <th>Car Model</th>
           <th>Weight</th>
           <th>Manufacture Year</th>
           <th>Sales Email</th>
-        </tr>
+        </thead>
 
         <?php
           $list = $model->getCarList();
           while ($row = $list->fetch_array()) {
         ?>
           <tr>
-            <td>
-              <form action="delete.php" method="post">
-                <input type="checkbox" name="checkbox" value="<?php echo $row["automobile_id"] ?>" />
-              </form>
-            </td>
+            <td></td>
             <td> <?php echo $row["automobile_id"] ?></td>
             <td> <?php echo $row["car_model"] ?></td>
             <td> <?php echo $row["weight"] ?></td>

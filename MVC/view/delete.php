@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="Style/style.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 
 <div class="center">
 
@@ -29,5 +29,5 @@
       <br />
       <br />
 
-      <a href="index.php" class="home">Back to Home</a>
+      <a href="index.php"> &#9668; Back to Home</a>
 </div>
